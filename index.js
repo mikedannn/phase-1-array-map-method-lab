@@ -12,5 +12,28 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let eachTitle = tutorials.map(el => el.split(' '));
+  for (let word in eachTitle){
+    for (let i = 0; i < eachTitle[word].length; i++) {
+      eachTitle[word][i] = eachTitle[word][i][0].toUpperCase() + eachTitle[word][i].substring(1);
+    }
+    tutorials[word] = eachTitle[word].join(" ");
+  }
+  return tutorials;
 }
+
+
+
+
+
+
+
+
+
+// function returns an array with title cased names into a new array 
+
+// separate the tutorials array 
+
+// capitalize the beginning letter in each word 
+
+// return new array 
